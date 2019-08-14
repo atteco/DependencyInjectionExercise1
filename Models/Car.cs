@@ -1,9 +1,9 @@
 using DependencyInjectionExercise1.Interfaces;
 namespace DependencyInjectionExercise1.Models 
 {
-    public class Car 
+    public class Car : ICar 
     {
-        private readonly IEngine _engine;
+        private IEngine _engine;
         public Car()
         {
         }
@@ -16,6 +16,7 @@ namespace DependencyInjectionExercise1.Models
         public IEngine engine 
         {
             get { return _engine; }
+            set { _engine = value; }
         }
     }
 }
